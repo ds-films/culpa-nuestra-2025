@@ -30,9 +30,6 @@
       width: 90vw;
       max-width: 960px;
       aspect-ratio: 16 / 9;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 20px rgba(0,0,0,0.6);
     }
 
     #player {
@@ -47,15 +44,14 @@
     <div id="player"></div>
   </div>
 
-  <!-- Подключение локальной версии PlayerJS -->
+  <!-- Локальная версия PlayerJS -->
   <script src="playerjs.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      const player = new Playerjs({
+      new Playerjs({
         id: "player",
         file: "https://pixeldrain.com/api/file/v5Q3Rz4P?download",
         poster: "https://i.postimg.cc/ZYBfPFTq/Culpa-nusestra-2025.png",
-        title: "Culpa Nuestra / Наша Вина",
         autoplay: false,
         controls: true
       });
