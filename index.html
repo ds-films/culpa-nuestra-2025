@@ -6,7 +6,7 @@
   <title>Culpa Nuestra / Наша Вина — Смотреть бесплатно</title>
   <meta name="description" content="Ноа и Ник встречаются спустя годы на свадьбе друзей. Их страсть вспыхивает вновь, но смогут ли они простить и начать всё заново? Фильм Culpa Nuestra / Наша Вина — драма о любви, страсти и выборе.">
   <meta name="keywords" content="Culpa Nuestra, Наша Вина, смотреть фильм, онлайн, бесплатно, 2025, драма, романтика, испанский фильм, любовная история, Ноа и Ник, страсть, отношения, любовь, кино 2025, фильм про любовь, фильмы онлайн, смотреть онлайн бесплатно">
-  
+
   <meta property="og:title" content="Culpa Nuestra / Наша Вина — Смотреть бесплатно">
   <meta property="og:description" content="Ноа и Ник вновь встречаются после расставания и должны решить — возродить ли любовь или отпустить навсегда.">
   <meta property="og:image" content="https://i.postimg.cc/ZYBfPFTq/Culpa-nusestra-2025.png">
@@ -30,6 +30,9 @@
       width: 90vw;
       max-width: 960px;
       aspect-ratio: 16 / 9;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
     }
 
     #player {
@@ -44,12 +47,18 @@
     <div id="player"></div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/playerjs@latest/playerjs.js"></script>
+  <!-- PlayerJS v15.4 -->
+  <script src="https://cdn.jsdelivr.net/npm/playerjs@15.4.0/dist/player.min.js"></script>
   <script>
-    new Playerjs({
-      id: "player",
-      file: "https://pixeldrain.com/api/file/v5Q3Rz4P?dowload",
-      poster: "https://i.postimg.cc/ZYBfPFTq/Culpa-nusestra-2025.png"
+    document.addEventListener("DOMContentLoaded", function() {
+      const player = new Playerjs({
+        id: "player",
+        file: "https://pixeldrain.com/api/file/v5Q3Rz4P?download",
+        poster: "https://i.postimg.cc/ZYBfPFTq/Culpa-nusestra-2025.png",
+        title: "Culpa Nuestra / Наша Вина",
+        autoplay: false,
+        controls: true
+      });
     });
   </script>
 
